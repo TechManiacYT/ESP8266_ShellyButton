@@ -5,7 +5,7 @@ Shelly themself offer the ability to use a seperate shelly device as wifi-switch
 
 * Battery powered wifi switch
 * Adjust the brightness of a Shelly RGBW2 over wifi
-* Adjust the brightness of a single RGBW2 Shelly channel 
+* Adjust the brightness of a single RGBW2 Shelly channel (Shelly RGBW2 has no incr or decr functionality)
 * For the shelly 2 relay devices: a 0,1,2 incremental switching
 
 The software contains basically 2 parts
@@ -17,3 +17,26 @@ I will try to add more comments to the code, however I dont think the code is th
 Requirements:
 * ESP8266 (I will add ESP32 support as soon as I receive my samples)
 * JSON library (https://arduinojson.org/v6/doc/installation/)
+
+Result - 3 Different configurations are available:
+
+1) Normal shelly relay ON/OFF switch
+* possible to adress the relay, regardless of shelly1 or shelly 2
+* Toggle the status of the relay by button push
+* Indicate the status of the relay on the LED (LOW, HIGH)
+
+2) Shelly2 Shelly2.5 relay 0/1/2 configuration
+* a lamp has 2 bulbs, but is treated by one single switch
+* every push of the button should change the status of the lamp: OFF, 1 Lamp on, Both lamps on
+* Indicate the status of the relays on the LED (LOW, MID, HIGH)
+
+3) Shelly RGBW2 White Mode
+* short push will toggle ON/OFF
+* Long push will increase/decrease the brightness
+* Indicate the status of the relay on the LED (LOW, HIGH)
+
+Status:
+* early stage
+* no failsafe operation yet (for example, what happens if a relay is not online)
+* Need code cleanup
+
