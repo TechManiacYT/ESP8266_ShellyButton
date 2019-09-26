@@ -38,5 +38,5 @@ Status:
 * early stage
 * no failsafe operation yet (for example, what happens if a relay is not online)
 * Need code cleanup
-*I will try to add more comments to the code, however I dont think the code is that hard to understand.
+* I will try to add more comments to the code, however I dont think the code is that hard to understand.
 
